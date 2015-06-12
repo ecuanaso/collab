@@ -12,8 +12,6 @@ Router.route('/posts/:_id', {
 	layoutTemplate: 'layout'
 });
 
-Router.route('/page/:_id',{
-    name: 'page',
-	layoutTemplate: 'layout'
+Router.route('/page/:_id', function() {
+    this.render('page');
 });
-

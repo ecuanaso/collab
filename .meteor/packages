@@ -20,6 +20,10 @@ less
 reywood:publish-composite
 dburles:collection-helpers
 orionjs:pages
+orionjs:styles
+orionjs:image-attribute
+audit-argument-checks
+browser-policy
+matteodem:easy-security
 materialize:materialize
 orionjs:materialize
-orionjs:styles
