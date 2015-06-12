@@ -1,0 +1,31 @@
+<template name="adminSidebarReplace">
+    <header class="materialize-sidebar">
+    <ul id="nav-mobile" class="side-nav fixed">
+      <li class="sidebar-brand no-padding">
+          <a href="{{ options 'homePath' '/' }}" class="waves-effect waves-teal">
+              <!-- {{ options 'siteName' 'Good Marketing Group' }} -->
+              <img src="../img/logo.png" alt="Good Marketing Group Logo" height="70" width="200">
+          </a>
+      </li>
+      {{# each adminLinks 'top' }}
+        {{> orionMaterializeSidebarLink }}
+      {{/ each }}
+      {{# each adminLinks 'medium' }}
+        {{> orionMaterializeSidebarLink }}
+      {{/ each }}
+      {{# each adminLinks 'bottom' }}
+        {{> orionMaterializeSidebarLink }}
+      {{/ each }}
+    </ul>
+  </header>
+</template>
+
+<template name="sidebarLinkReplacement">
+  <li class="{{ isActiveRoute regex=activeRouteRegex }} no-padding">
+
+    <a href="{{ pathFor routeName }}" class="waves-effect waves-teal">
+		  {{{image}}}
+    	<span style="padding:10px;">{{ title }}</span>
+    </a>
+  </li>
+</template>

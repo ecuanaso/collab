@@ -23,7 +23,8 @@ orionjs:pages
 orionjs:styles
 orionjs:image-attribute
 audit-argument-checks
-browser-policy
 matteodem:easy-security
 materialize:materialize
 orionjs:materialize
+aldeed:template-extension
+lepozepo:s3

@@ -13,8 +13,3 @@ Template.header.helpers({
     }
 });
 
-// Template.header.events({
-// 	'click a' : function(){
-// 		$(this).removeClass("drag-target");
-// 	}
-// });
