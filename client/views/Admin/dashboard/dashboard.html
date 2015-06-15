@@ -1,7 +1,10 @@
 <template name="dashboard">
 {{#Layout template="orionMaterializeLayout"}}
 	{{#Layout template="adminHeaderReplace"}}
-		<h4>Dashboard</h4>
+		<h1 class="header center-on-small-only">Dashboard</h1>
+    <h4 class="light blue-text text-lighten-4 center-on-small-only hide-on-small-only" style="  padding-left: 0.5rem;">
+      What would you like to do?
+    </h4>
 	{{/Layout}}
 
 	<div style="padding:10px;">
@@ -13,55 +16,51 @@
 <template name="cards">
 	<div class="row row-xs">
         <div class="col s12 m4 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://placeimg.com/640/480/any">
-              <span class="card-title">Card Title</span>
+          <div class="card orange lighten-1">
+            <div class="card-content black-text">
+              <span class="card-title white-text">Add new page</span>
+                <i class="right medium mdi-content-add orange-text text-darken-2" style="margin-top: -21px;"></i>
+                {{#each pages}}
+                  
+                {{/each}}
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://placeimg.com/640/480/any">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
+            <div class="card-action center-align">
+              <a href="{{pathFor route='pages.index'}}" class="white-text">See all <i class="mdi-navigation-arrow-forward white-text"></i></a>
+              
             </div>
           </div>
         </div>
 
         <div class="col s12 m4 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://placeimg.com/640/480/any">
-              <span class="card-title">Card Title</span>
+          <div class="card red lighten-1">
+            <div class="card-content black-text">
+              <span class="card-title white-text">Write a post</span>
+              <i class="right medium mdi-content-create red-text text-darken-2" style="margin-top: -21px;"></i>
             </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+            <div class="card-action center-align">
+              <a href="{{pathFor route='posts'}}" class="white-text">See all <i class="mdi-navigation-arrow-forward white-text"></i></a>
             </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href='#'>This is a link</a>
+          </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+          <div class="card green lighten-1">
+            <div class="card-content black-text">
+              <span class="card-title white-text">Add image </span>
+              <i class="right medium mdi-image-camera-alt green-text text-darken-2" style="margin-top:-21px;"></i>
+            </div>
+            <div class="card-action center-align">
+              <a href="{{pathFor route='dictionary.update'}}" class="white-text">See all <i class="mdi-navigation-arrow-forward white-text"></i></a>
             </div>
           </div>
         </div>
       </div>
             
 </template>
+
+
+
+
+<!-- <td align="center" class="w4em">
+  <a href="../pages/visible.php?id=274&amp;visible=2" original-title="Show in  Header"><img alt="Visible" src="http://goodgroupllc.com/rks_admin/rks_template/images/icons/ok.png"></a>
+</td> -->
