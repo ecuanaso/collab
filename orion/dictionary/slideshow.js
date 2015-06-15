@@ -11,7 +11,7 @@ orion.dictionary.addDefinition('test', 'slides', {
 
 orion.dictionary.addDefinition('slideshow', 'slides', 
 	orion.attribute('file', {
-        label: "Image",
+        label: "1st slide",
     	optional: true
     })
 );
@@ -23,7 +23,7 @@ orion.dictionary.addDefinition('test2', 'slides', {
 
 orion.dictionary.addDefinition('slideshow2', 'slides', 
 	orion.attribute('file', {
-        label: "Image#2",
+        label: "2nd slide",
     	optional: true
     })
 );
@@ -35,7 +35,7 @@ orion.dictionary.addDefinition('test3', 'slides', {
 
 orion.dictionary.addDefinition('slideshow3', 'slides', 
 	orion.attribute('file', {
-        label: "Image#3",
+        label: "3rd slide",
     	optional: true
     })
 );

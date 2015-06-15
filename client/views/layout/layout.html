@@ -5,7 +5,7 @@
 			{{> header }}
 		</div>
 		<br><br>
-		<div class="content">
+		<div class="content main">
 		  <div class="container">			
 			{{> yield }}
 		  </div>
@@ -23,21 +23,24 @@
 </template>
 
 <template name="nav">
-  <nav>
+  <nav style="background-color:#2196F3;">
 	    <div class="nav-wrapper">
 	    <div style="margin-left:5px;">
-	      <a href="#!" class="brand-logo">Logo</a>
+	      <a href="#!" class="brand-logo"><img src="{{ dict 'images.logo.url'}}" width="{{ dict 'info.width' }}" alt=""></a>
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	      <!-- full width -->
 	      <ul class="right hide-on-med-and-down">
-	      	<li class="test"><a href="{{ pathFor 'home' }}">Home</a></li>
+	      	<li class="active"><a href="{{ pathFor 'home' }}">Home</a></li>
 	        {{#each pages}}
 	            <li class="test"><a href="{{path}}">{{title}}</a></li>
 	        {{/each}}
 	      </ul>
+
+	      <!-- mobile side -->
 	      <ul class="side-nav" id="mobile-demo">
-	      	<li class="test"><a href="{{ pathFor 'home' }}">Home</a></li>
+	      	<li><a href="{{ pathFor 'home' }}">Home</a></li>
 	        {{#each pages}}
-	            <li class="test"><a href="{{path}}">{{title}}</a></li>
+	            <li><a href="{{path}}">{{title}}</a></li>
 	        {{/each}}
 	      </ul>
 	     </div>
@@ -47,11 +50,29 @@
 
 
 <template name="footer">
-	<hr>
-	<p class="text-muted">
-		<a href="http://github.com/orionjs/orion">Orion</a> 
-		is an open source platform that allow developers to create complex websites in minutes.
-		Its build with <a href="http://meteor.com">Meteor</a> by <a href="http://github.com/nicolaslopezj">Nicolás López</a>
-	</p>
+        <footer class="page-footer" style="background-color:#2196F3;">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                {{#each pages}}
+                  <li><a class="grey-text text-lighten-3" href="{{path}}">{{title}}</a></li>
+                {{/each}}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015 Good Marketing Group
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 </template>	
 

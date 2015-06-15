@@ -15,7 +15,8 @@ Posts = new orion.collection('posts', {
      * The default value is the name of the collection, so
      * in this case is not necesary
      */
-    title: orion.helpers.getTranslation('posts.title')
+    title: orion.helpers.getTranslation('posts.title'),
+    image: '<i class="mdi-editor-mode-edit"></i>'
   },
   /**
    * Tabular settings for this collection
@@ -29,7 +30,7 @@ Posts = new orion.collection('posts', {
        * orion.attributeColumn(attributeType, key, label)
        */
       orion.attributeColumn('file', 'image', orion.helpers.getTranslation('posts.schema.image')),
-      orion.attributeColumn('summernote', 'body', orion.helpers.getTranslation('posts.schema.body')),
+      orion.attributeColumn('froala', 'body', orion.helpers.getTranslation('posts.schema.body')),
       orion.attributeColumn('createdBy', 'createdBy', orion.helpers.getTranslation('posts.schema.createdBy')),
       orion.attributeColumn('createdAt', 'createdAt', orion.helpers.getTranslation('posts.schema.createdAt'))
     ]
@@ -59,9 +60,9 @@ Posts.attachSchema(new SimpleSchema({
   }),
   /**
    * Here its the same with image attribute.
-   * summernote is a html editor.
+   * froala is a html editor.
    */
-  body: orion.attribute('summernote', {
+  body: orion.attribute('froala', {
       label: orion.helpers.getTranslation('posts.schema.body') // We use this function to make i18n work in autoform
   }),
   /**

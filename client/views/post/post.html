@@ -1,6 +1,7 @@
 <template name="post">
 	<div class="post-detail">
-		<h3>
+	<img src="{{ post.getCreator.profile.picture }}" alt="">
+	<h3>
       {{ post.title }}
       <small>by {{ post.getCreator.profile.name }}</small>  
     </h3>

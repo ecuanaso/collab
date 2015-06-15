@@ -15,3 +15,4 @@ Router.route('/posts/:_id', {
 Router.route('/page/:_id', function() {
     this.render('page');
 });
+

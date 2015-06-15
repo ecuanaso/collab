@@ -1,3 +1,13 @@
+// Template.layout.rendered = function(){
+
+//   $('.test').on('click', function(e){
+// 	    e.preventDefault();
+// 	});
+
+// };
+
+Session.setDefault('selectedLink', 'active');
+
 Template.header.rendered = function(){
 	 $('.button-collapse').sideNav({
           menuWidth: 300, // Default is 240
@@ -10,6 +20,13 @@ Template.header.rendered = function(){
 Template.header.helpers({
     pages: function(){
         return Pages.find();
+    }
+});
+
+Template.nav.events({
+    'click .test': function (e, t) {
+        $(this).addClass('active');
+
     }
 });
 

@@ -1,5 +1,12 @@
+orion.config.add('AWS_API_KEY', 'aws')
+orion.config.add('AWS_API_SECRET', 'aws', {secret: true})
+orion.config.add('AWS_S3_BUCKET', 'aws')
+
+/**
+ * Sets the credentials when the server starts
+ */
 S3.config = {
-    key: 'AKIAIRA3734D7ZHE7TXQ',
-    secret: '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',
-    bucket: 'goodmarketinggroup'
+  key: orion.config.get('AWS_API_KEY'),
+  secret: orion.config.get('AWS_API_SECRET'),
+  bucket: orion.config.get('AWS_S3_BUCKET')
 };

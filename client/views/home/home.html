@@ -2,6 +2,8 @@
 	{{# unless currentUser }}
 	<p><b>Register to edit the content of this site</b></p>
 	{{/ unless }}
+
+	{{> slideShow}}
 	<p>
 		Orion allows the admin to easily 
 		<a href="{{ pathFor 'dictionary.update' }}">edit</a> 
@@ -28,4 +30,39 @@
 			<div class="image" style="background-image: url({{ image.url }})"></div>
 		</a>
 	</div>
+</template>
+
+<template name="slideShow">
+	<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{{ dict 'slides.slideshow.url' }}"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>{{ dict 'slides.test' 'No description' }}</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="{{ dict 'slides.slideshow2.url' }}"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="{{ dict 'slides.slideshow3.url' }}"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>

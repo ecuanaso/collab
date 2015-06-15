@@ -7,3 +7,8 @@ Template.home.helpers({
 		return Posts.find();
 	}
 });
+
+Template.home.rendered = function(){
+   $('.materialboxed').materialbox();
+   $('.slider').slider({full_width: true});        
+}

@@ -9,3 +9,4 @@ orion.dictionary.addDefinition('homeText', 'public', {
     type: String,
     label: orion.helpers.getTranslation('dictionary.public.homeText')
 });
+
