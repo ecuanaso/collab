@@ -159,7 +159,12 @@ orion.pages.tabular = new Tabular.Table({
   collection: orion.pages.collection,
   columns: [
     { data: 'title', title: i18n('pages.schema.title') },
-    { data: 'url', title: i18n('pages.schema.url'), render: function(val, type, doc) { return '<a href="' + Router.path('pages', doc) + '">' + Router.path('pages', doc) + '</a>'; } }
+    { data: 'url', title: i18n('pages.schema.url'), render: function(val, type, doc) { return '<a href="' + Router.path('pages', doc) + '">' + Router.path('pages', doc) + '</a>'; } },
+    { data: 'actions', title: i18n('pages.schema.actions'),
+      render: function (){
+        return '<a class="btn waves-effect waves-light light-blue accent-4 user-btn-action">Edit</a>'
+      }
+  }
   ]
 });
 
