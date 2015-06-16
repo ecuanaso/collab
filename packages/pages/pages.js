@@ -59,6 +59,8 @@ orion.pages.addTemplate = function (options, schema) {
   return newTemplate;
 };
 
+
+
 orion.pages.getNewTemplateSchema = function (schema, newTemplate) {
   return _.extend({
     title: {
@@ -69,7 +71,16 @@ orion.pages.getNewTemplateSchema = function (schema, newTemplate) {
       type: String,
       regEx: /^[a-z0-9A-Z_-]+$/,
       unique: true,
-      label: orion.helpers.getTranslation('pages.schema.url')
+      label: orion.helpers.getTranslation('pages.schema.url'),
+      autoValue: function(){
+        var pageTitle = this.field('title');
+        var pageUrl = this.field('url');
+        if (pageUrl.isSet){
+          return pageUrl.value.replace(/\s/g, "").toLowerCase();
+        } else {
+          return pageTitle.value.replace(/\s/g, "").toLowerCase();
+        }
+      }
     },
     template: {
       type: String,
@@ -125,6 +136,9 @@ orion.pages.getNewTemplateSchema = function (schema, newTemplate) {
     }
   }, schema);
 };
+
+
+
 
 var Tabular = null;
 

@@ -29,8 +29,8 @@ Template.dashboard.rendered = function(){
 };
 
 Template.dashboard.helpers({
-  pages: function(){
-    return Pages.find().count();
+  count: function(){
+    return Pages.find().count()
   }
 });
 
