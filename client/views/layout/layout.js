@@ -23,10 +23,3 @@ Template.header.helpers({
     }
 });
 
-Template.nav.events({
-    'click .test': function (e, t) {
-        $(this).addClass('active');
-
-    }
-});
-

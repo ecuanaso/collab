@@ -28,9 +28,4 @@ Template.dashboard.rendered = function(){
   });       
 };
 
-Template.dashboard.helpers({
-  count: function(){
-    return Pages.find().count()
-  }
-});
 
